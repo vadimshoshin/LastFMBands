@@ -15,14 +15,12 @@ final class RealmManager: DatabaseManager {
                 realm.add(bands)
             }
         } catch let error {
-            debugPrint("Database storing error")
+            debugPrint("Database storing error - \(error)")
         }
     }
     
     func fetchBands() -> [Band] {
-        var bands: [Band]
         let bandsResult = realm.objects(Band.self)
-        debugPrint("=== fetched bands from database - \(Array(bandsResult))")
         return Array(bandsResult)
     }
 }

@@ -47,13 +47,9 @@ class BandsViewModelImpl: BandsViewModel {
                 let sorted = bands.sorted(by: { $0.name < $1.name })
                 self.bands = sorted
                 self.onBandsLoaded?()
-                for band in bands {
-                    debugPrint(band.name)
-                }
-                
                 self.database.storeBands(sorted)
-            case .failure(let error):
                 
+            case .failure(let error):
                 let bands  = self.database.fetchBands()
                 let sorted = bands.sorted(by: { $0.name < $1.name })
                 self.bands = sorted
