@@ -22,6 +22,7 @@
 		8572911B248FCF1500841874 /* BandsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572911A248FCF1500841874 /* BandsViewModel.swift */; };
 		8572911D248FCF1E00841874 /* BandsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572911C248FCF1E00841874 /* BandsRouter.swift */; };
 		8572911F248FCF6700841874 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572911E248FCF6700841874 /* NavigationRouter.swift */; };
+		85CE1FEA2490066B00C4EE58 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FE92490066B00C4EE58 /* DatabaseManager.swift */; };
 		85E74F61248FD8A400C1E7B5 /* BandsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E74F60248FD8A400C1E7B5 /* BandsMediator.swift */; };
 		85E74F64248FDA5400C1E7B5 /* BandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E74F62248FDA5400C1E7B5 /* BandCell.swift */; };
 		85E74F65248FDA5400C1E7B5 /* BandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85E74F63248FDA5400C1E7B5 /* BandCell.xib */; };
@@ -49,6 +50,7 @@
 		8572911A248FCF1500841874 /* BandsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsViewModel.swift; sourceTree = "<group>"; };
 		8572911C248FCF1E00841874 /* BandsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsRouter.swift; sourceTree = "<group>"; };
 		8572911E248FCF6700841874 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		85CE1FE92490066B00C4EE58 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		85E74F60248FD8A400C1E7B5 /* BandsMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsMediator.swift; sourceTree = "<group>"; };
 		85E74F62248FDA5400C1E7B5 /* BandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandCell.swift; sourceTree = "<group>"; };
 		85E74F63248FDA5400C1E7B5 /* BandCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BandCell.xib; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				85729111248FCB5B00841874 /* Networking */,
 				85729113248FCB9900841874 /* BandsManager.swift */,
 				85729115248FCD7100841874 /* AppDependencies.swift */,
+				85CE1FE92490066B00C4EE58 /* DatabaseManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				857290E3248FAAAA00841874 /* NetworkManager.swift in Sources */,
 				8572911F248FCF6700841874 /* NavigationRouter.swift in Sources */,
 				8572911D248FCF1E00841874 /* BandsRouter.swift in Sources */,
+				85CE1FEA2490066B00C4EE58 /* DatabaseManager.swift in Sources */,
 				85E74F6A248FDC1B00C1E7B5 /* BandCellModel.swift in Sources */,
 				85E74F64248FDA5400C1E7B5 /* BandCell.swift in Sources */,
 				8572910C248FB4DE00841874 /* SceneDelegate.swift in Sources */,
