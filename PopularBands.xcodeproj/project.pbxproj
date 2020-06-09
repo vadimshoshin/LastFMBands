@@ -23,6 +23,9 @@
 		8572911D248FCF1E00841874 /* BandsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572911C248FCF1E00841874 /* BandsRouter.swift */; };
 		8572911F248FCF6700841874 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572911E248FCF6700841874 /* NavigationRouter.swift */; };
 		85CE1FEA2490066B00C4EE58 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FE92490066B00C4EE58 /* DatabaseManager.swift */; };
+		85CE1FEC2490151700C4EE58 /* BandDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FEB2490151700C4EE58 /* BandDetailsViewController.swift */; };
+		85CE1FEE2490153100C4EE58 /* BandDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FED2490153100C4EE58 /* BandDetailsRouter.swift */; };
+		85CE1FF02490153D00C4EE58 /* BandDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FEF2490153D00C4EE58 /* BandDetailsViewModel.swift */; };
 		85E74F61248FD8A400C1E7B5 /* BandsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E74F60248FD8A400C1E7B5 /* BandsMediator.swift */; };
 		85E74F64248FDA5400C1E7B5 /* BandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E74F62248FDA5400C1E7B5 /* BandCell.swift */; };
 		85E74F65248FDA5400C1E7B5 /* BandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85E74F63248FDA5400C1E7B5 /* BandCell.xib */; };
@@ -51,6 +54,9 @@
 		8572911C248FCF1E00841874 /* BandsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsRouter.swift; sourceTree = "<group>"; };
 		8572911E248FCF6700841874 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		85CE1FE92490066B00C4EE58 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		85CE1FEB2490151700C4EE58 /* BandDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandDetailsViewController.swift; sourceTree = "<group>"; };
+		85CE1FED2490153100C4EE58 /* BandDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandDetailsRouter.swift; sourceTree = "<group>"; };
+		85CE1FEF2490153D00C4EE58 /* BandDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandDetailsViewModel.swift; sourceTree = "<group>"; };
 		85E74F60248FD8A400C1E7B5 /* BandsMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsMediator.swift; sourceTree = "<group>"; };
 		85E74F62248FDA5400C1E7B5 /* BandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandCell.swift; sourceTree = "<group>"; };
 		85E74F63248FDA5400C1E7B5 /* BandCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BandCell.xib; sourceTree = "<group>"; };
@@ -163,6 +169,9 @@
 		85729118248FCEFB00841874 /* TopTracks */ = {
 			isa = PBXGroup;
 			children = (
+				85CE1FEB2490151700C4EE58 /* BandDetailsViewController.swift */,
+				85CE1FED2490153100C4EE58 /* BandDetailsRouter.swift */,
+				85CE1FEF2490153D00C4EE58 /* BandDetailsViewModel.swift */,
 			);
 			path = TopTracks;
 			sourceTree = "<group>";
@@ -318,10 +327,13 @@
 				8572910C248FB4DE00841874 /* SceneDelegate.swift in Sources */,
 				857290E8248FAB1600841874 /* Track.swift in Sources */,
 				857290D3248FA4A900841874 /* BandsViewController.swift in Sources */,
+				85CE1FEE2490153100C4EE58 /* BandDetailsRouter.swift in Sources */,
 				85E74F68248FDAEC00C1E7B5 /* UITableViewCell+Extensions.swift in Sources */,
 				857290E6248FAB0B00841874 /* Band.swift in Sources */,
+				85CE1FEC2490151700C4EE58 /* BandDetailsViewController.swift in Sources */,
 				85E74F61248FD8A400C1E7B5 /* BandsMediator.swift in Sources */,
 				85729116248FCD7200841874 /* AppDependencies.swift in Sources */,
+				85CE1FF02490153D00C4EE58 /* BandDetailsViewModel.swift in Sources */,
 				857290EA248FAE9D00841874 /* APIRouter.swift in Sources */,
 				857290CF248FA4A900841874 /* AppDelegate.swift in Sources */,
 				8572911B248FCF1500841874 /* BandsViewModel.swift in Sources */,

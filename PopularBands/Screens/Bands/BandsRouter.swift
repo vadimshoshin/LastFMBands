@@ -5,21 +5,24 @@ protocol NavigationRouter: class {
 }
 
 protocol BandsRouter: NavigationRouter {
-    
+    func showDetailsScreen(for bandId: String)
 }
 
 class BandsRouterImpl: BandsRouter {
     let dependencies: AppDependencies
     
     weak var controller: BandsViewController?
-    weak var navigationController: UINavigationController?
     
     init(with dependencies: AppDependencies) {
         self.dependencies = dependencies
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        guard let detailsScreen = segue.destination as? BandDetailsViewController, segue.identifier == "showDetails", let bandID = sender as? String else {
+            return
+        }
+        let bandDetailsRouter = BandDetailsRouterImpl(with: dependencies)
+        bandDetailsRouter.start(with: detailsScreen, bandId: bandID)
     }
     
     func start(with controller: BandsViewController) {
@@ -27,6 +30,10 @@ class BandsRouterImpl: BandsRouter {
         viewModel.router = self
         self.controller = controller
         controller.configure(router: self, viewModel: viewModel)
+    }
+    
+    func showDetailsScreen(for bandId: String) {
+        controller?.performSegue(withIdentifier: "showDetails", sender: bandId)
     }
     
 }

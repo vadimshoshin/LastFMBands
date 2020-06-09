@@ -80,6 +80,8 @@ class BandsViewModelImpl: BandsViewModel {
     }
     
     func processItemSelection(at index: Int) {
-        
+        let selectedBand = bands[index]
+        let bandID = selectedBand.id
+        router?.showDetailsScreen(for: bandID)
     }
 }

@@ -32,11 +32,28 @@
                     <navigationItem key="navigationItem" id="NPC-5C-NeL"/>
                     <connections>
                         <outlet property="bandsTableView" destination="AMc-0U-qrh" id="lSV-Mw-j7u"/>
+                        <segue destination="jco-6i-kEc" kind="show" identifier="showDetails" id="LRO-pe-Q0F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="99.776785714285708"/>
+        </scene>
+        <!--Band Details View Controller-->
+        <scene sceneID="ltf-1S-Y0f">
+            <objects>
+                <viewController id="jco-6i-kEc" customClass="BandDetailsViewController" customModule="PopularBands" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9SO-Gz-8LB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="JAh-Qi-Sbb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="O7U-9y-eXN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6EW-Vr-YqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886" y="100"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="scW-4h-QPJ">
