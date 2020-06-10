@@ -25,6 +25,36 @@ class BandsViewController: UIViewController {
     private func setupUI() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: viewModel.selectedCountry, style: .plain, target: self, action: #selector(selectCountry))
         countryButton = navigationItem.rightBarButtonItem
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "statusIcon"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(modePressed))
+        navigationItem.leftBarButtonItem?.tintColor = Reachability.status ? .green : .red
+    }
+    
+    @objc func modePressed() {
+        #if DEVELOP
+            presentModeSelector()
+        #endif
+    }
+    
+    private func presentModeSelector() {
+        let modeController = UIAlertController(title: "Select network mode", message: nil, preferredStyle: .actionSheet)
+        let onlineMode = UIAlertAction(title: "Online", style: .default) { [weak self] _ in
+            Reachability.forcedOfflineStatus = false
+            self?.setupUI()
+            self?.performFetch()
+        }
+        
+        let offlineMode = UIAlertAction(title: "Offline", style: .default) { [weak self] _ in
+            Reachability.forcedOfflineStatus = true
+            self?.setupUI()
+            self?.performFetch()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        modeController.addAction(onlineMode)
+        modeController.addAction(offlineMode)
+        modeController.addAction(cancelAction)
+        present(modeController, animated: true)
     }
     
     

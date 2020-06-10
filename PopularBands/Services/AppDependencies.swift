@@ -7,7 +7,7 @@ struct AppDependencies {
     
     init() {
         networkManager = NetworkManager()
-        dataFetcher = DataFetcherImpl(networking: networkManager)
         databaseManager = RealmManager()
+        dataFetcher = DataFetcherImpl(networking: networkManager, database: databaseManager)
     }
 }

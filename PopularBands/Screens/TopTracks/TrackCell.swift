@@ -1,7 +1,7 @@
 import UIKit
 import SDWebImage
 
-class TrackCell: UITableViewCell {
+class TrackCell: UITableViewCell, ReusableTableViewCell {
     @IBOutlet private weak var trackCover: UIImageView!
     @IBOutlet private weak var trackTitle: UILabel!
     @IBOutlet private weak var cardView: UIView!
@@ -21,6 +21,6 @@ class TrackCell: UITableViewCell {
     
     func setup(with model: TrackCellModel) {
         trackCover.sd_setImage(with: URL(string:model.trackCoverURL), completed: nil)
-        trackTitle.text = model.trackName + " (\(model.plays) plays.)"
+        trackTitle.text = model.trackName + " (\(model.plays) plays)"
     }
 }

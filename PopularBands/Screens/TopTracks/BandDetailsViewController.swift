@@ -39,9 +39,8 @@ class BandDetailsViewController: UIViewController {
     
     private func setupUI() {
         title = viewModel.bandName()
-        viewModel.bandImageUrl {[weak self] urlString in
-            self?.artistImage.sd_setImage(with: URL(string: urlString), completed: nil)
-        }
+        let imageURL = viewModel.bandImageUrl()
+        artistImage.sd_setImage(with: URL(string: imageURL ?? ""), completed: nil)
     }
     
     func configure(router: NavigationRouter, viewModel: BandDetailsViewModel) {

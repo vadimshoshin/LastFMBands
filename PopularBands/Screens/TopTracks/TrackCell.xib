@@ -55,9 +55,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cardView" destination="p95-dy-8oj" id="0bi-dL-Y5C"/>
-                <outlet property="titleLabel" destination="ABl-Li-mIu" id="cJR-2m-95B"/>
                 <outlet property="trackCover" destination="0R5-0X-9dn" id="0K2-qt-sRH"/>
-                <outlet property="trackTitle" destination="8Hx-bR-Oho" id="KDe-Ts-6iV"/>
+                <outlet property="trackTitle" destination="8Hx-bR-Oho" id="fa3-aN-gqu"/>
             </connections>
             <point key="canvasLocation" x="189.13043478260872" y="150.66964285714286"/>
         </tableViewCell>

@@ -12,7 +12,7 @@ final class BandDetailsMediator: NSObject {
     }
     
     private func setupTableView() {
-//        BandCell.register(in: tableView)
+        TrackCell.register(in: tableView)
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -24,8 +24,7 @@ final class BandDetailsMediator: NSObject {
 
 extension BandDetailsMediator: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-//        return dataSource.numberOfItems
+        return dataSource.tracksCount
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -33,9 +32,9 @@ extension BandDetailsMediator: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = BandCell.dequeue(in: tableView, at: indexPath)
-//        let cellModel = dataSource.bandModel(at: indexPath.row)
-//        cell.setup(with: cellModel)
+        let cell = TrackCell.dequeue(in: tableView, at: indexPath)
+        let cellModel = dataSource.trackCellModel(at: indexPath.row)
+        cell.setup(with: cellModel)
         return cell
     }
 }

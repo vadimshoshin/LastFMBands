@@ -7,25 +7,29 @@ protocol DataFetcher {
 
 struct DataFetcherImpl: DataFetcher {
     let networking: Networking
+    let database: DatabaseManager
 
-    init(networking: Networking) {
+    init(networking: Networking, database: DatabaseManager) {
         self.networking = networking
+        self.database = database
     }
     
     func fetchBands(for country: String, completion: @escaping (Result<[Band], Error>) -> Void) {
-        networking.getPopularBands(for: country) { result in
-            switch result {
-            case .success(let bands):
-                completion(.success(bands))
-                
-            case .failure(let error):
-                debugPrint("bands fetching error - \(error)")
-            }
+        
+        if Reachability.status {
+            networking.getPopularBands(for: country, completion: completion)
+        } else {
+            let bands = database.fetchBands()
+            completion(.success(bands))
         }
     }
     
     func fetchTracks(by bandID: String, completion: @escaping (Result<[Track], Error>) -> Void) {
-        networking.getTopTracks(by: bandID, completion: completion)
+        if Reachability.status {
+            networking.getTopTracks(by: bandID, completion: completion)
+        } else {
+            let tracks = database.fetchTracks(with: bandID)
+            completion(.success(tracks))
+        }
     }
-    
 }

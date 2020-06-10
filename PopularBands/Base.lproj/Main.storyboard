@@ -50,16 +50,16 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ENe-Il-CqT">
                                 <rect key="frame" x="0.0" y="88" width="414" height="269"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PbN-ch-YfY">
-                                <rect key="frame" x="0.0" y="357" width="414" height="539"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PbN-ch-YfY">
+                                <rect key="frame" x="0.0" y="367" width="414" height="529"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ENe-Il-CqT" firstAttribute="leading" secondItem="JAh-Qi-Sbb" secondAttribute="leading" id="Fup-Z5-amu"/>
                             <constraint firstItem="JAh-Qi-Sbb" firstAttribute="trailing" secondItem="PbN-ch-YfY" secondAttribute="trailing" id="L7i-WZ-8bv"/>
-                            <constraint firstItem="PbN-ch-YfY" firstAttribute="top" secondItem="ENe-Il-CqT" secondAttribute="bottom" id="UqI-xj-gCE"/>
+                            <constraint firstItem="PbN-ch-YfY" firstAttribute="top" secondItem="ENe-Il-CqT" secondAttribute="bottom" constant="10" id="UqI-xj-gCE"/>
                             <constraint firstItem="PbN-ch-YfY" firstAttribute="leading" secondItem="JAh-Qi-Sbb" secondAttribute="leading" id="WrH-PH-K2u"/>
                             <constraint firstItem="JAh-Qi-Sbb" firstAttribute="trailing" secondItem="ENe-Il-CqT" secondAttribute="trailing" id="b7Y-5i-lIg"/>
                             <constraint firstAttribute="bottom" secondItem="PbN-ch-YfY" secondAttribute="bottom" id="uUp-Mn-Xr2"/>

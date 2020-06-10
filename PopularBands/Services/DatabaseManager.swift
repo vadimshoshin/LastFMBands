@@ -6,7 +6,6 @@ protocol DatabaseManager {
     func fetchBand(with id: String) -> Band?
     func fetchTracks(with bandID: String) -> [Track] 
     func store<T: Object>(items: [T])
-    func storeBands(bands: [Band])
 }
 
 final class RealmManager: DatabaseManager {
@@ -15,7 +14,8 @@ final class RealmManager: DatabaseManager {
     func store<T: Object>(items: [T]) {
         do {
             try realm.write {
-                realm.add(items)
+                realm.add(items, update: .all)
+//                realm.add(items)
             }
         } catch let error {
             debugPrint("Database storing error - \(error)")
@@ -35,16 +35,5 @@ final class RealmManager: DatabaseManager {
     func fetchTracks(with bandID: String) -> [Track] {
         return Array( realm.objects(Track.self).filter( {$0.artist?.mbid == bandID}))
     }
-    
-    func storeBands(bands: [Band]) {
-        do {
-            
-            for band in bands {
-                realm.add(band)
-            }
 
-        } catch let error {
-            debugPrint("Database storing error - \(error)")
-        }
-    }
 }

@@ -12,6 +12,10 @@ class Band: Object, Codable {
         case artistPhoto = "image"
         case listeners
     }
+    
+    override class func primaryKey() -> String? {
+        return "mbid"
+    }
 }
 
 class ArtistImage: Object, Codable {

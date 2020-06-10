@@ -69,6 +69,7 @@ class BandsViewModelImpl: BandsViewModel {
     }
     
     private func bandImageUrl(_ band: Band) -> String {
+        
         let imagesList = band.artistPhoto
         return imagesList.first?.url ?? ""
     }
