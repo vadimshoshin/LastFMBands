@@ -2,18 +2,19 @@ import Foundation
 import RealmSwift
 
 protocol DatabaseManager {
-    func storeBands(_ bands: [Band])
     func fetchBands() -> [Band]
     func fetchBand(with id: String) -> Band?
+    func fetchTracks(with bandID: String) -> [Track] 
+    func store<T: Object>(items: [T])
 }
 
 final class RealmManager: DatabaseManager {
     let realm = try! Realm()
     
-    func storeBands(_ bands: [Band]) {
+    func store<T: Object>(items: [T]) {
         do {
             try realm.write {
-                realm.add(bands)
+                realm.add(items)
             }
         } catch let error {
             debugPrint("Database storing error - \(error)")
@@ -29,5 +30,10 @@ final class RealmManager: DatabaseManager {
         let predicate = NSPredicate(format: "id = %@", id)
         let result = Array(realm.objects(Band.self).filter(predicate))
         return result.first
+    }
+    
+    func fetchTracks(with bandID: String) -> [Track] {
+        let predicate = NSPredicate(format: "artist.id = %@", bandID)
+        return Array(realm.objects(Track.self).filter(predicate))
     }
 }

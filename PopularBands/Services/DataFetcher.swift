@@ -1,11 +1,11 @@
 import Foundation
 
-protocol BandsManager {
+protocol DataFetcher {
     func fetchBands(for country: String, completion: @escaping (Result<[Band], Error>) -> Void)
     func fetchTracks(by bandID: String, completion: @escaping (Result<[Track], Error>) -> Void)
 }
 
-struct BandsManagerImpl: BandsManager {
+struct DataFetcherImpl: DataFetcher {
     let networking: Networking
 
     init(networking: Networking) {

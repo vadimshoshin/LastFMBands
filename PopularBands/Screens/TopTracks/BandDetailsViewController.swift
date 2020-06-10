@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class BandDetailsViewController: UIViewController {
     @IBOutlet private weak var tracksTableView: UITableView!
@@ -20,7 +21,7 @@ class BandDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         debugPrint("selectedBandID - \(viewModel.bandName())")
-        title = viewModel.bandName()
+        setupUI()
         mediator = BandDetailsMediator(tableView: tracksTableView, dataSource: viewModel)
         setupViewModelBlocks()
         viewModel.fetchData()
@@ -29,6 +30,17 @@ class BandDetailsViewController: UIViewController {
     private func setupViewModelBlocks() {
         viewModel.onDataUpdated = { [weak self] in
             self?.mediator.reload()
+        }
+        
+        viewModel.onBandSetup = { [weak self] in
+            self?.setupUI()
+        }
+    }
+    
+    private func setupUI() {
+        title = viewModel.bandName()
+        viewModel.bandImageUrl {[weak self] urlString in
+            self?.artistImage.sd_setImage(with: URL(string: urlString), completed: nil)
         }
     }
     

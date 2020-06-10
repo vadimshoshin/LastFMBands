@@ -2,12 +2,12 @@ import Foundation
 
 struct AppDependencies {
     let networkManager: Networking
-    let bandsManager: BandsManager
+    let dataFetcher: DataFetcher
     let databaseManager: DatabaseManager
     
     init() {
         networkManager = NetworkManager()
-        bandsManager = BandsManagerImpl(networking: networkManager)
+        dataFetcher = DataFetcherImpl(networking: networkManager)
         databaseManager = RealmManager()
     }
 }

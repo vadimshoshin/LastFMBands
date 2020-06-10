@@ -13,7 +13,7 @@ protocol BandsViewModel {
 }
 
 class BandsViewModelImpl: BandsViewModel {
-    let bandsManager: BandsManager
+    let dataFetcher: DataFetcher
     let database: DatabaseManager
     
     weak var router: BandsRouter?
@@ -31,7 +31,7 @@ class BandsViewModelImpl: BandsViewModel {
     var bands: [Band] = []
     
     init(with dependencies: AppDependencies) {
-        bandsManager = dependencies.bandsManager
+        dataFetcher = dependencies.dataFetcher
         database = dependencies.databaseManager
     }
     
@@ -40,14 +40,15 @@ class BandsViewModelImpl: BandsViewModel {
     }
     
     func fetchBands() {
-        bandsManager.fetchBands(for: selectedCountry) { [weak self] result in
+        dataFetcher.fetchBands(for: selectedCountry) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let bands):
                 let sorted = bands.sorted(by: { $0.name < $1.name })
                 self.bands = sorted
                 self.onBandsLoaded?()
-                self.database.storeBands(sorted)
+                self.database.store(items: sorted)
+//                self.database.storeBands(sorted)
                 
             case .failure(let error):
                 let bands  = self.database.fetchBands()
