@@ -3,8 +3,8 @@ import RealmSwift
 class Band: Object, Codable {
     @objc dynamic var name: String
     @objc dynamic var id: String
-    let images: Set<BandImage>
-    @objc dynamic var listeners: String
+    let images: Set<ImageObject>?
+    @objc dynamic var listeners: String?
     enum CodingKeys: String, CodingKey {
         case name
         case id = "mbid"
@@ -13,7 +13,7 @@ class Band: Object, Codable {
     }
 }
 
-class BandImage:Object, Codable {
+class ImageObject:Object, Codable {
     @objc dynamic var size: String
     @objc dynamic var url: String
     

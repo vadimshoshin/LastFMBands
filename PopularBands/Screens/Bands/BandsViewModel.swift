@@ -62,11 +62,11 @@ class BandsViewModelImpl: BandsViewModel {
     func bandModel(at index: Int) -> BandCellModel {
         let band = bands[index]
         let bandImageURL = bandImageUrl(band)
-        return BandCellModel(bandName: band.name, bandImageURL: bandImageURL, listeners: band.listeners)
+        return BandCellModel(bandName: band.name, bandImageURL: bandImageURL, listeners: band.listeners ?? "")
     }
     
     private func bandImageUrl(_ band: Band) -> String {
-        let bandImages = Array(band.images)
+        let bandImages = Array(band.images ?? [])
         for image in bandImages {
             if image.size == "large" || image.size == "medium" {
                 return image.url

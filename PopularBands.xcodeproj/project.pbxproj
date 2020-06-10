@@ -25,6 +25,14 @@
 		8572911F248FCF6700841874 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572911E248FCF6700841874 /* NavigationRouter.swift */; };
 		859731DF2490E12300038AD8 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859731DE2490E12300038AD8 /* AppEnvironment.swift */; };
 		859731E02490E12300038AD8 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859731DE2490E12300038AD8 /* AppEnvironment.swift */; };
+		859731E22490F00900038AD8 /* BandDetailsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859731E12490F00900038AD8 /* BandDetailsMediator.swift */; };
+		859731E32490F00900038AD8 /* BandDetailsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859731E12490F00900038AD8 /* BandDetailsMediator.swift */; };
+		859731E62490F0E400038AD8 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859731E42490F0E400038AD8 /* TrackCell.swift */; };
+		859731E72490F0E400038AD8 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859731E42490F0E400038AD8 /* TrackCell.swift */; };
+		859731E82490F0E400038AD8 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 859731E52490F0E400038AD8 /* TrackCell.xib */; };
+		859731E92490F0E400038AD8 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 859731E52490F0E400038AD8 /* TrackCell.xib */; };
+		859731EB2490F17500038AD8 /* TrackCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859731EA2490F17500038AD8 /* TrackCellModel.swift */; };
+		859731EC2490F17500038AD8 /* TrackCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859731EA2490F17500038AD8 /* TrackCellModel.swift */; };
 		85CE1FEA2490066B00C4EE58 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FE92490066B00C4EE58 /* DatabaseManager.swift */; };
 		85CE1FEC2490151700C4EE58 /* BandDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FEB2490151700C4EE58 /* BandDetailsViewController.swift */; };
 		85CE1FEE2490153100C4EE58 /* BandDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FED2490153100C4EE58 /* BandDetailsRouter.swift */; };
@@ -83,6 +91,10 @@
 		8572911C248FCF1E00841874 /* BandsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsRouter.swift; sourceTree = "<group>"; };
 		8572911E248FCF6700841874 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		859731DE2490E12300038AD8 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		859731E12490F00900038AD8 /* BandDetailsMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandDetailsMediator.swift; sourceTree = "<group>"; };
+		859731E42490F0E400038AD8 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		859731E52490F0E400038AD8 /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
+		859731EA2490F17500038AD8 /* TrackCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCellModel.swift; sourceTree = "<group>"; };
 		85CE1FE92490066B00C4EE58 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		85CE1FEB2490151700C4EE58 /* BandDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandDetailsViewController.swift; sourceTree = "<group>"; };
 		85CE1FED2490153100C4EE58 /* BandDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandDetailsRouter.swift; sourceTree = "<group>"; };
@@ -183,6 +195,7 @@
 				857290E5248FAB0B00841874 /* Band.swift */,
 				857290E7248FAB1600841874 /* Track.swift */,
 				85E74F69248FDC1A00C1E7B5 /* BandCellModel.swift */,
+				859731EA2490F17500038AD8 /* TrackCellModel.swift */,
 				859731DE2490E12300038AD8 /* AppEnvironment.swift */,
 			);
 			path = Models;
@@ -227,6 +240,9 @@
 				85CE1FEB2490151700C4EE58 /* BandDetailsViewController.swift */,
 				85CE1FED2490153100C4EE58 /* BandDetailsRouter.swift */,
 				85CE1FEF2490153D00C4EE58 /* BandDetailsViewModel.swift */,
+				859731E12490F00900038AD8 /* BandDetailsMediator.swift */,
+				859731E42490F0E400038AD8 /* TrackCell.swift */,
+				859731E52490F0E400038AD8 /* TrackCell.xib */,
 			);
 			path = TopTracks;
 			sourceTree = "<group>";
@@ -329,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				857290DB248FA4AC00841874 /* LaunchScreen.storyboard in Resources */,
+				859731E82490F0E400038AD8 /* TrackCell.xib in Resources */,
 				857290D8248FA4AC00841874 /* Assets.xcassets in Resources */,
 				85E74F65248FDA5400C1E7B5 /* BandCell.xib in Resources */,
 				857290D6248FA4A900841874 /* Main.storyboard in Resources */,
@@ -340,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85CE200B2490D7A900C4EE58 /* LaunchScreen.storyboard in Resources */,
+				859731E92490F0E400038AD8 /* TrackCell.xib in Resources */,
 				85CE200C2490D7A900C4EE58 /* Assets.xcassets in Resources */,
 				85CE200D2490D7A900C4EE58 /* BandCell.xib in Resources */,
 				85CE200E2490D7A900C4EE58 /* Main.storyboard in Resources */,
@@ -444,8 +462,10 @@
 				8572910C248FB4DE00841874 /* SceneDelegate.swift in Sources */,
 				857290E8248FAB1600841874 /* Track.swift in Sources */,
 				857290D3248FA4A900841874 /* BandsViewController.swift in Sources */,
+				859731E62490F0E400038AD8 /* TrackCell.swift in Sources */,
 				85CE1FEE2490153100C4EE58 /* BandDetailsRouter.swift in Sources */,
 				85E74F68248FDAEC00C1E7B5 /* UITableViewCell+Extensions.swift in Sources */,
+				859731E22490F00900038AD8 /* BandDetailsMediator.swift in Sources */,
 				857290E6248FAB0B00841874 /* Band.swift in Sources */,
 				85CE1FEC2490151700C4EE58 /* BandDetailsViewController.swift in Sources */,
 				859731DF2490E12300038AD8 /* AppEnvironment.swift in Sources */,
@@ -453,6 +473,7 @@
 				85729116248FCD7200841874 /* AppDependencies.swift in Sources */,
 				85CE1FF02490153D00C4EE58 /* BandDetailsViewModel.swift in Sources */,
 				857290EA248FAE9D00841874 /* APIRouter.swift in Sources */,
+				859731EB2490F17500038AD8 /* TrackCellModel.swift in Sources */,
 				857290CF248FA4A900841874 /* AppDelegate.swift in Sources */,
 				8572911B248FCF1500841874 /* BandsViewModel.swift in Sources */,
 			);
@@ -472,8 +493,10 @@
 				85CE1FFB2490D7A900C4EE58 /* SceneDelegate.swift in Sources */,
 				85CE1FFC2490D7A900C4EE58 /* Track.swift in Sources */,
 				85CE1FFD2490D7A900C4EE58 /* BandsViewController.swift in Sources */,
+				859731E72490F0E400038AD8 /* TrackCell.swift in Sources */,
 				85CE1FFE2490D7A900C4EE58 /* BandDetailsRouter.swift in Sources */,
 				85CE1FFF2490D7A900C4EE58 /* UITableViewCell+Extensions.swift in Sources */,
+				859731E32490F00900038AD8 /* BandDetailsMediator.swift in Sources */,
 				85CE20002490D7A900C4EE58 /* Band.swift in Sources */,
 				85CE20012490D7A900C4EE58 /* BandDetailsViewController.swift in Sources */,
 				859731E02490E12300038AD8 /* AppEnvironment.swift in Sources */,
@@ -481,6 +504,7 @@
 				85CE20032490D7A900C4EE58 /* AppDependencies.swift in Sources */,
 				85CE20042490D7A900C4EE58 /* BandDetailsViewModel.swift in Sources */,
 				85CE20052490D7A900C4EE58 /* APIRouter.swift in Sources */,
+				859731EC2490F17500038AD8 /* TrackCellModel.swift in Sources */,
 				85CE20062490D7A900C4EE58 /* AppDelegate.swift in Sources */,
 				85CE20072490D7A900C4EE58 /* BandsViewModel.swift in Sources */,
 			);

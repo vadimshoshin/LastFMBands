@@ -2,6 +2,7 @@ import Foundation
 
 protocol BandsManager {
     func fetchBands(for country: String, completion: @escaping (Result<[Band], Error>) -> Void)
+    func fetchTracks(by bandID: String, completion: @escaping (Result<[Track], Error>) -> Void)
 }
 
 struct BandsManagerImpl: BandsManager {
@@ -21,6 +22,10 @@ struct BandsManagerImpl: BandsManager {
                 debugPrint("bands fetching error - \(error)")
             }
         }
+    }
+    
+    func fetchTracks(by bandID: String, completion: @escaping (Result<[Track], Error>) -> Void) {
+        networking.getTopTracks(by: bandID, completion: completion)
     }
     
 }

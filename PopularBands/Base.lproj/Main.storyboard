@@ -46,10 +46,33 @@
                     <view key="view" contentMode="scaleToFill" id="9SO-Gz-8LB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ENe-Il-CqT">
+                                <rect key="frame" x="0.0" y="88" width="414" height="269"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PbN-ch-YfY">
+                                <rect key="frame" x="0.0" y="357" width="414" height="539"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ENe-Il-CqT" firstAttribute="leading" secondItem="JAh-Qi-Sbb" secondAttribute="leading" id="Fup-Z5-amu"/>
+                            <constraint firstItem="JAh-Qi-Sbb" firstAttribute="trailing" secondItem="PbN-ch-YfY" secondAttribute="trailing" id="L7i-WZ-8bv"/>
+                            <constraint firstItem="PbN-ch-YfY" firstAttribute="top" secondItem="ENe-Il-CqT" secondAttribute="bottom" id="UqI-xj-gCE"/>
+                            <constraint firstItem="PbN-ch-YfY" firstAttribute="leading" secondItem="JAh-Qi-Sbb" secondAttribute="leading" id="WrH-PH-K2u"/>
+                            <constraint firstItem="JAh-Qi-Sbb" firstAttribute="trailing" secondItem="ENe-Il-CqT" secondAttribute="trailing" id="b7Y-5i-lIg"/>
+                            <constraint firstAttribute="bottom" secondItem="PbN-ch-YfY" secondAttribute="bottom" id="uUp-Mn-Xr2"/>
+                            <constraint firstItem="ENe-Il-CqT" firstAttribute="top" secondItem="JAh-Qi-Sbb" secondAttribute="top" id="w2O-Bf-5pU"/>
+                            <constraint firstItem="ENe-Il-CqT" firstAttribute="height" secondItem="9SO-Gz-8LB" secondAttribute="height" multiplier="0.3" id="x22-dh-msp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JAh-Qi-Sbb"/>
                     </view>
                     <navigationItem key="navigationItem" id="O7U-9y-eXN"/>
+                    <connections>
+                        <outlet property="artistImage" destination="ENe-Il-CqT" id="JDJ-XR-csW"/>
+                        <outlet property="tracksTableView" destination="PbN-ch-YfY" id="p15-pq-FTh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6EW-Vr-YqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
