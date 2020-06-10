@@ -1,19 +1,20 @@
 import RealmSwift
 
 class Band: Object, Codable {
-    @objc dynamic var name: String
-    @objc dynamic var id: String
-    let images: Set<ImageObject>
+    @objc dynamic var name: String?
+    @objc dynamic var mbid: String?
     @objc dynamic var listeners: String?
+    
+    var artistPhoto = List<ArtistImage>()
     enum CodingKeys: String, CodingKey {
         case name
-        case id = "mbid"
-        case images = "image"
+        case mbid
+        case artistPhoto = "image"
         case listeners
     }
 }
 
-class ImageObject:Object, Codable {
+class ArtistImage: Object, Codable {
     @objc dynamic var size: String
     @objc dynamic var url: String
     

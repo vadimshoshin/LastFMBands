@@ -81,7 +81,7 @@ class NetworkManager: Networking {
                 
                 
             case .failure(let error):
-                debugPrint("tracks fetching erro - \(error)")
+                debugPrint("tracks fetching error - \(error)")
                 completion(.failure(error))
             }
         }

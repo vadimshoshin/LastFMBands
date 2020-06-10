@@ -6,6 +6,7 @@ protocol DatabaseManager {
     func fetchBand(with id: String) -> Band?
     func fetchTracks(with bandID: String) -> [Track] 
     func store<T: Object>(items: [T])
+    func storeBands(bands: [Band])
 }
 
 final class RealmManager: DatabaseManager {
@@ -27,13 +28,23 @@ final class RealmManager: DatabaseManager {
     }
     
     func fetchBand(with id: String) -> Band? {
-        let predicate = NSPredicate(format: "id = %@", id)
-        let result = Array(realm.objects(Band.self).filter(predicate))
+        let result = Array(realm.objects(Band.self).filter( {$0.mbid == id} ))
         return result.first
     }
     
     func fetchTracks(with bandID: String) -> [Track] {
-        let predicate = NSPredicate(format: "artist.id = %@", bandID)
-        return Array(realm.objects(Track.self).filter(predicate))
+        return Array( realm.objects(Track.self).filter( {$0.artist?.mbid == bandID}))
+    }
+    
+    func storeBands(bands: [Band]) {
+        do {
+            
+            for band in bands {
+                realm.add(band)
+            }
+
+        } catch let error {
+            debugPrint("Database storing error - \(error)")
+        }
     }
 }

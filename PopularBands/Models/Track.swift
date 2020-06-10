@@ -4,7 +4,7 @@ class Track: Object, Codable {
     @objc dynamic var name: String
     @objc dynamic var id: String
     @objc dynamic var playcount: String
-    let images: Set<ImageObject>?
+    let images: Set<ArtistImage>?
     @objc dynamic var artist: Band?
     
     enum CodingKeys: String, CodingKey {

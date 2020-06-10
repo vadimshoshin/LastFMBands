@@ -44,15 +44,17 @@ class BandsViewModelImpl: BandsViewModel {
             guard let self = self else { return }
             switch result {
             case .success(let bands):
-                let sorted = bands.sorted(by: { $0.name < $1.name })
+                let sorted = bands.sorted(by: { $0.name ?? "" < $1.name ?? "" })
                 self.bands = sorted
                 self.onBandsLoaded?()
                 self.database.store(items: sorted)
-//                self.database.storeBands(sorted)
+                
+                let fetchedBands = self.database.fetchBands()
+                debugPrint("local bands - \(fetchedBands)")
                 
             case .failure(let error):
                 let bands  = self.database.fetchBands()
-                let sorted = bands.sorted(by: { $0.name < $1.name })
+                let sorted = bands.sorted(by: { $0.name ?? "" < $1.name ?? "" })
                 self.bands = sorted
                 self.onBandsLoaded?()
                 debugPrint(error)
@@ -63,17 +65,12 @@ class BandsViewModelImpl: BandsViewModel {
     func bandModel(at index: Int) -> BandCellModel {
         let band = bands[index]
         let bandImageURL = bandImageUrl(band)
-        return BandCellModel(bandName: band.name, bandImageURL: bandImageURL, listeners: band.listeners ?? "")
+        return BandCellModel(bandName: band.name ?? "", bandImageURL: bandImageURL, listeners: band.listeners ?? "")
     }
     
     private func bandImageUrl(_ band: Band) -> String {
-        let bandImages = Array(band.images ?? [])
-        for image in bandImages {
-            if image.size == "large" || image.size == "medium" {
-                return image.url
-            }
-        }
-        return bandImages.first?.url ?? ""
+        let imagesList = band.artistPhoto
+        return imagesList.first?.url ?? ""
     }
     
     func processCountrySelection(selectedCountry: String) {
@@ -82,7 +79,7 @@ class BandsViewModelImpl: BandsViewModel {
     
     func processItemSelection(at index: Int) {
         let selectedBand = bands[index]
-        let bandID = selectedBand.id
-        router?.showDetailsScreen(for: bandID)
+        let bandID = selectedBand.mbid
+        router?.showDetailsScreen(for: bandID ?? "")
     }
 }

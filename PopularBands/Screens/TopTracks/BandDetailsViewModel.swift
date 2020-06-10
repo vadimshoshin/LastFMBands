@@ -34,7 +34,7 @@ class BandDetailsViewModelImpl: BandDetailsViewModel {
             return ""
         }
         
-        return band.name
+        return band.name ?? ""
     }
     
     func bandImageUrl(completion: @escaping (String) -> Void) {
@@ -42,12 +42,9 @@ class BandDetailsViewModelImpl: BandDetailsViewModel {
             return
         }
         
-        let bandImages = Array(band.images ?? [])
-        for image in bandImages {
-            if image.size == "large" || image.size == "medium" {
-                completion(image.url)
-            }
-        }
+        let imagesList = band.artistPhoto
+        let topResolution = imagesList.first(where: {$0.size == "extralarge"} )
+        completion(topResolution?.url ?? "")
     }
     
     func fetchData() {
