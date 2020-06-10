@@ -18,6 +18,13 @@ class BandsViewController: UIViewController {
         setupViewModelBlocks()
         performFetch()
         self.title = "Popular Artists"
+        
+        #if DEVELOP
+        debugPrint("env is develop")
+        #else
+        debugPrint("env is prod")
+        #endif
+        
     }
     
     private func setupUI() {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1656FFF560E547A5F1954124 /* Pods_App_PopularBands.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3A66AF72FC8323456EA7FC /* Pods_App_PopularBands.framework */; };
 		857290CF248FA4A900841874 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857290CE248FA4A900841874 /* AppDelegate.swift */; };
 		857290D3248FA4A900841874 /* BandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857290D2248FA4A900841874 /* BandsViewController.swift */; };
 		857290D6248FA4A900841874 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 857290D4248FA4A900841874 /* Main.storyboard */; };
@@ -26,16 +27,42 @@
 		85CE1FEC2490151700C4EE58 /* BandDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FEB2490151700C4EE58 /* BandDetailsViewController.swift */; };
 		85CE1FEE2490153100C4EE58 /* BandDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FED2490153100C4EE58 /* BandDetailsRouter.swift */; };
 		85CE1FF02490153D00C4EE58 /* BandDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FEF2490153D00C4EE58 /* BandDetailsViewModel.swift */; };
+		85CE1FF42490D7A900C4EE58 /* BandsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85729113248FCB9900841874 /* BandsManager.swift */; };
+		85CE1FF52490D7A900C4EE58 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857290E2248FAAAA00841874 /* NetworkManager.swift */; };
+		85CE1FF62490D7A900C4EE58 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572911E248FCF6700841874 /* NavigationRouter.swift */; };
+		85CE1FF72490D7A900C4EE58 /* BandsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572911C248FCF1E00841874 /* BandsRouter.swift */; };
+		85CE1FF82490D7A900C4EE58 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FE92490066B00C4EE58 /* DatabaseManager.swift */; };
+		85CE1FF92490D7A900C4EE58 /* BandCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E74F69248FDC1A00C1E7B5 /* BandCellModel.swift */; };
+		85CE1FFA2490D7A900C4EE58 /* BandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E74F62248FDA5400C1E7B5 /* BandCell.swift */; };
+		85CE1FFB2490D7A900C4EE58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572910B248FB4DE00841874 /* SceneDelegate.swift */; };
+		85CE1FFC2490D7A900C4EE58 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857290E7248FAB1600841874 /* Track.swift */; };
+		85CE1FFD2490D7A900C4EE58 /* BandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857290D2248FA4A900841874 /* BandsViewController.swift */; };
+		85CE1FFE2490D7A900C4EE58 /* BandDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FED2490153100C4EE58 /* BandDetailsRouter.swift */; };
+		85CE1FFF2490D7A900C4EE58 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E74F67248FDAEC00C1E7B5 /* UITableViewCell+Extensions.swift */; };
+		85CE20002490D7A900C4EE58 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857290E5248FAB0B00841874 /* Band.swift */; };
+		85CE20012490D7A900C4EE58 /* BandDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FEB2490151700C4EE58 /* BandDetailsViewController.swift */; };
+		85CE20022490D7A900C4EE58 /* BandsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E74F60248FD8A400C1E7B5 /* BandsMediator.swift */; };
+		85CE20032490D7A900C4EE58 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85729115248FCD7100841874 /* AppDependencies.swift */; };
+		85CE20042490D7A900C4EE58 /* BandDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FEF2490153D00C4EE58 /* BandDetailsViewModel.swift */; };
+		85CE20052490D7A900C4EE58 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857290E9248FAE9D00841874 /* APIRouter.swift */; };
+		85CE20062490D7A900C4EE58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857290CE248FA4A900841874 /* AppDelegate.swift */; };
+		85CE20072490D7A900C4EE58 /* BandsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572911A248FCF1500841874 /* BandsViewModel.swift */; };
+		85CE200B2490D7A900C4EE58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 857290D9248FA4AC00841874 /* LaunchScreen.storyboard */; };
+		85CE200C2490D7A900C4EE58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 857290D7248FA4AC00841874 /* Assets.xcassets */; };
+		85CE200D2490D7A900C4EE58 /* BandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85E74F63248FDA5400C1E7B5 /* BandCell.xib */; };
+		85CE200E2490D7A900C4EE58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 857290D4248FA4A900841874 /* Main.storyboard */; };
 		85E74F61248FD8A400C1E7B5 /* BandsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E74F60248FD8A400C1E7B5 /* BandsMediator.swift */; };
 		85E74F64248FDA5400C1E7B5 /* BandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E74F62248FDA5400C1E7B5 /* BandCell.swift */; };
 		85E74F65248FDA5400C1E7B5 /* BandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85E74F63248FDA5400C1E7B5 /* BandCell.xib */; };
 		85E74F68248FDAEC00C1E7B5 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E74F67248FDAEC00C1E7B5 /* UITableViewCell+Extensions.swift */; };
 		85E74F6A248FDC1B00C1E7B5 /* BandCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E74F69248FDC1A00C1E7B5 /* BandCellModel.swift */; };
-		AA6E6738CBE44C548533F74E /* Pods_PopularBands.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6CCAB985188CF7A58D9838 /* Pods_PopularBands.framework */; };
+		A6731CF01F30EF7F2EC11DE2 /* Pods_App_PopularBands_Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC900C2AD27CBD01C8FCDDF3 /* Pods_App_PopularBands_Dev.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D6CCAB985188CF7A58D9838 /* Pods_PopularBands.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopularBands.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		022686FB853FFD950BB0B3AB /* Pods-App-PopularBands.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-PopularBands.debug.xcconfig"; path = "Target Support Files/Pods-App-PopularBands/Pods-App-PopularBands.debug.xcconfig"; sourceTree = "<group>"; };
+		59FA99FDB833C84DC483092F /* Pods-App-PopularBands.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-PopularBands.release.xcconfig"; path = "Target Support Files/Pods-App-PopularBands/Pods-App-PopularBands.release.xcconfig"; sourceTree = "<group>"; };
+		6D3A66AF72FC8323456EA7FC /* Pods_App_PopularBands.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_PopularBands.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		857290CB248FA4A900841874 /* PopularBands.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularBands.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		857290CE248FA4A900841874 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		857290D2248FA4A900841874 /* BandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsViewController.swift; sourceTree = "<group>"; };
@@ -57,13 +84,16 @@
 		85CE1FEB2490151700C4EE58 /* BandDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandDetailsViewController.swift; sourceTree = "<group>"; };
 		85CE1FED2490153100C4EE58 /* BandDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandDetailsRouter.swift; sourceTree = "<group>"; };
 		85CE1FEF2490153D00C4EE58 /* BandDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandDetailsViewModel.swift; sourceTree = "<group>"; };
+		85CE20132490D7A900C4EE58 /* PopularBands Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PopularBands Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85CE20142490D7A900C4EE58 /* PopularBands copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PopularBands copy-Info.plist"; path = "/Users/softwarestation3/Documents/Projects/LastFMBands/PopularBands copy-Info.plist"; sourceTree = "<absolute>"; };
 		85E74F60248FD8A400C1E7B5 /* BandsMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsMediator.swift; sourceTree = "<group>"; };
 		85E74F62248FDA5400C1E7B5 /* BandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandCell.swift; sourceTree = "<group>"; };
 		85E74F63248FDA5400C1E7B5 /* BandCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BandCell.xib; sourceTree = "<group>"; };
 		85E74F67248FDAEC00C1E7B5 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		85E74F69248FDC1A00C1E7B5 /* BandCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandCellModel.swift; sourceTree = "<group>"; };
-		8D52F7A5870761369258FD6C /* Pods-PopularBands.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopularBands.debug.xcconfig"; path = "Target Support Files/Pods-PopularBands/Pods-PopularBands.debug.xcconfig"; sourceTree = "<group>"; };
-		969CBD566C9E08A360BB9603 /* Pods-PopularBands.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopularBands.release.xcconfig"; path = "Target Support Files/Pods-PopularBands/Pods-PopularBands.release.xcconfig"; sourceTree = "<group>"; };
+		966BB46A3BF8B0C449C36670 /* Pods-App-PopularBands Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-PopularBands Dev.release.xcconfig"; path = "Target Support Files/Pods-App-PopularBands Dev/Pods-App-PopularBands Dev.release.xcconfig"; sourceTree = "<group>"; };
+		9EBE2F3FF72A3C332968ECA1 /* Pods-App-PopularBands Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-PopularBands Dev.debug.xcconfig"; path = "Target Support Files/Pods-App-PopularBands Dev/Pods-App-PopularBands Dev.debug.xcconfig"; sourceTree = "<group>"; };
+		BC900C2AD27CBD01C8FCDDF3 /* Pods_App_PopularBands_Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_PopularBands_Dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +101,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA6E6738CBE44C548533F74E /* Pods_PopularBands.framework in Frameworks */,
+				1656FFF560E547A5F1954124 /* Pods_App_PopularBands.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85CE20082490D7A900C4EE58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6731CF01F30EF7F2EC11DE2 /* Pods_App_PopularBands_Dev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +119,21 @@
 		4ADFCE1AFA1A2A0F4BB55119 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8D52F7A5870761369258FD6C /* Pods-PopularBands.debug.xcconfig */,
-				969CBD566C9E08A360BB9603 /* Pods-PopularBands.release.xcconfig */,
+				022686FB853FFD950BB0B3AB /* Pods-App-PopularBands.debug.xcconfig */,
+				59FA99FDB833C84DC483092F /* Pods-App-PopularBands.release.xcconfig */,
+				9EBE2F3FF72A3C332968ECA1 /* Pods-App-PopularBands Dev.debug.xcconfig */,
+				966BB46A3BF8B0C449C36670 /* Pods-App-PopularBands Dev.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		61C6182290DF4D92238C0C6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D3A66AF72FC8323456EA7FC /* Pods_App_PopularBands.framework */,
+				BC900C2AD27CBD01C8FCDDF3 /* Pods_App_PopularBands_Dev.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		857290C2248FA4A900841874 = {
@@ -93,7 +142,8 @@
 				857290CD248FA4A900841874 /* PopularBands */,
 				857290CC248FA4A900841874 /* Products */,
 				4ADFCE1AFA1A2A0F4BB55119 /* Pods */,
-				AAA15FEB9CE6036F3C4FC3CC /* Frameworks */,
+				85CE20142490D7A900C4EE58 /* PopularBands copy-Info.plist */,
+				61C6182290DF4D92238C0C6D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				857290CB248FA4A900841874 /* PopularBands.app */,
+				85CE20132490D7A900C4EE58 /* PopularBands Dev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,14 +244,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		AAA15FEB9CE6036F3C4FC3CC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0D6CCAB985188CF7A58D9838 /* Pods_PopularBands.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,11 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 857290DF248FA4AC00841874 /* Build configuration list for PBXNativeTarget "PopularBands" */;
 			buildPhases = (
-				69760AFE85E917DE19E1D4E9 /* [CP] Check Pods Manifest.lock */,
+				A4A7718027ED72126B4607EC /* [CP] Check Pods Manifest.lock */,
 				857290C7248FA4A900841874 /* Sources */,
 				857290C8248FA4A900841874 /* Frameworks */,
 				857290C9248FA4A900841874 /* Resources */,
-				22818C092219417169276339 /* [CP] Embed Pods Frameworks */,
+				3C2979551E8C0AC72352F7F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,6 +264,25 @@
 			name = PopularBands;
 			productName = PopularBands;
 			productReference = 857290CB248FA4A900841874 /* PopularBands.app */;
+			productType = "com.apple.product-type.application";
+		};
+		85CE1FF12490D7A900C4EE58 /* PopularBands Dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85CE20102490D7A900C4EE58 /* Build configuration list for PBXNativeTarget "PopularBands Dev" */;
+			buildPhases = (
+				D833B7C69B4328A8F869F10F /* [CP] Check Pods Manifest.lock */,
+				85CE1FF32490D7A900C4EE58 /* Sources */,
+				85CE20082490D7A900C4EE58 /* Frameworks */,
+				85CE200A2490D7A900C4EE58 /* Resources */,
+				3E847F7B5B8004C332A04D92 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PopularBands Dev";
+			productName = PopularBands;
+			productReference = 85CE20132490D7A900C4EE58 /* PopularBands Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -252,6 +314,7 @@
 			projectRoot = "";
 			targets = (
 				857290CA248FA4A900841874 /* PopularBands */,
+				85CE1FF12490D7A900C4EE58 /* PopularBands Dev */,
 			);
 		};
 /* End PBXProject section */
@@ -268,27 +331,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		85CE200A2490D7A900C4EE58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85CE200B2490D7A900C4EE58 /* LaunchScreen.storyboard in Resources */,
+				85CE200C2490D7A900C4EE58 /* Assets.xcassets in Resources */,
+				85CE200D2490D7A900C4EE58 /* BandCell.xib in Resources */,
+				85CE200E2490D7A900C4EE58 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		22818C092219417169276339 /* [CP] Embed Pods Frameworks */ = {
+		3C2979551E8C0AC72352F7F0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PopularBands/Pods-PopularBands-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-App-PopularBands/Pods-App-PopularBands-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PopularBands/Pods-PopularBands-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-App-PopularBands/Pods-App-PopularBands-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PopularBands/Pods-PopularBands-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-PopularBands/Pods-App-PopularBands-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		69760AFE85E917DE19E1D4E9 /* [CP] Check Pods Manifest.lock */ = {
+		3E847F7B5B8004C332A04D92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-App-PopularBands Dev/Pods-App-PopularBands Dev-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-App-PopularBands Dev/Pods-App-PopularBands Dev-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-PopularBands Dev/Pods-App-PopularBands Dev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4A7718027ED72126B4607EC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -303,7 +394,29 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PopularBands-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-App-PopularBands-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D833B7C69B4328A8F869F10F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-App-PopularBands Dev-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -337,6 +450,33 @@
 				857290EA248FAE9D00841874 /* APIRouter.swift in Sources */,
 				857290CF248FA4A900841874 /* AppDelegate.swift in Sources */,
 				8572911B248FCF1500841874 /* BandsViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85CE1FF32490D7A900C4EE58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85CE1FF42490D7A900C4EE58 /* BandsManager.swift in Sources */,
+				85CE1FF52490D7A900C4EE58 /* NetworkManager.swift in Sources */,
+				85CE1FF62490D7A900C4EE58 /* NavigationRouter.swift in Sources */,
+				85CE1FF72490D7A900C4EE58 /* BandsRouter.swift in Sources */,
+				85CE1FF82490D7A900C4EE58 /* DatabaseManager.swift in Sources */,
+				85CE1FF92490D7A900C4EE58 /* BandCellModel.swift in Sources */,
+				85CE1FFA2490D7A900C4EE58 /* BandCell.swift in Sources */,
+				85CE1FFB2490D7A900C4EE58 /* SceneDelegate.swift in Sources */,
+				85CE1FFC2490D7A900C4EE58 /* Track.swift in Sources */,
+				85CE1FFD2490D7A900C4EE58 /* BandsViewController.swift in Sources */,
+				85CE1FFE2490D7A900C4EE58 /* BandDetailsRouter.swift in Sources */,
+				85CE1FFF2490D7A900C4EE58 /* UITableViewCell+Extensions.swift in Sources */,
+				85CE20002490D7A900C4EE58 /* Band.swift in Sources */,
+				85CE20012490D7A900C4EE58 /* BandDetailsViewController.swift in Sources */,
+				85CE20022490D7A900C4EE58 /* BandsMediator.swift in Sources */,
+				85CE20032490D7A900C4EE58 /* AppDependencies.swift in Sources */,
+				85CE20042490D7A900C4EE58 /* BandDetailsViewModel.swift in Sources */,
+				85CE20052490D7A900C4EE58 /* APIRouter.swift in Sources */,
+				85CE20062490D7A900C4EE58 /* AppDelegate.swift in Sources */,
+				85CE20072490D7A900C4EE58 /* BandsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +618,7 @@
 		};
 		857290E0248FA4AC00841874 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D52F7A5870761369258FD6C /* Pods-PopularBands.debug.xcconfig */;
+			baseConfigurationReference = 022686FB853FFD950BB0B3AB /* Pods-App-PopularBands.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -488,6 +628,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"PRODUCTION\" \"-D\" \"DEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = VadimShoshin.PopularBands;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -497,7 +638,7 @@
 		};
 		857290E1248FA4AC00841874 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 969CBD566C9E08A360BB9603 /* Pods-PopularBands.release.xcconfig */;
+			baseConfigurationReference = 59FA99FDB833C84DC483092F /* Pods-App-PopularBands.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -507,6 +648,47 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"PRODUCTION\"";
+				PRODUCT_BUNDLE_IDENTIFIER = VadimShoshin.PopularBands;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		85CE20112490D7A900C4EE58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EBE2F3FF72A3C332968ECA1 /* Pods-App-PopularBands Dev.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HB949PJ4Q9;
+				INFOPLIST_FILE = "PopularBands copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"DEBUG\" \"-D\" \"DEVELOP\" \"-D\" COCOAPODS";
+				PRODUCT_BUNDLE_IDENTIFIER = VadimShoshin.PopularBands;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85CE20122490D7A900C4EE58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 966BB46A3BF8B0C449C36670 /* Pods-App-PopularBands Dev.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HB949PJ4Q9;
+				INFOPLIST_FILE = "PopularBands copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"DEVELOP\" \"-D\" COCOAPODS";
 				PRODUCT_BUNDLE_IDENTIFIER = VadimShoshin.PopularBands;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -531,6 +713,15 @@
 			buildConfigurations = (
 				857290E0248FA4AC00841874 /* Debug */,
 				857290E1248FA4AC00841874 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85CE20102490D7A900C4EE58 /* Build configuration list for PBXNativeTarget "PopularBands Dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85CE20112490D7A900C4EE58 /* Debug */,
+				85CE20122490D7A900C4EE58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

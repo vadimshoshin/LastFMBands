@@ -16,7 +16,7 @@ struct BandsManagerImpl: BandsManager {
             switch result {
             case .success(let bands):
                 completion(.success(bands))
-                #warning("implement dataBase Saving here")
+                
             case .failure(let error):
                 debugPrint("bands fetching error - \(error)")
             }
