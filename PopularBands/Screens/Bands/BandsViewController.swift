@@ -19,12 +19,7 @@ class BandsViewController: UIViewController {
         performFetch()
         self.title = "Popular Artists"
         
-        #if DEVELOP
-        debugPrint("env is develop")
-        #else
-        debugPrint("env is prod")
-        #endif
-        
+        debugPrint("env is \(AppEnvironment.current)")
     }
     
     private func setupUI() {
