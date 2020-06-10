@@ -16,6 +16,7 @@ class BandDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         debugPrint("selectedBandID - \(viewModel.bandName())")
+        title = viewModel.bandName()
     }
     
     func configure(router: NavigationRouter, viewModel: BandDetailsViewModel) {

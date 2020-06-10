@@ -4,6 +4,7 @@ import RealmSwift
 protocol DatabaseManager {
     func storeBands(_ bands: [Band])
     func fetchBands() -> [Band]
+    func fetchBand(with id: String) -> Band?
 }
 
 final class RealmManager: DatabaseManager {
@@ -22,5 +23,11 @@ final class RealmManager: DatabaseManager {
     func fetchBands() -> [Band] {
         let bandsResult = realm.objects(Band.self)
         return Array(bandsResult)
+    }
+    
+    func fetchBand(with id: String) -> Band? {
+        let predicate = NSPredicate(format: "id = %@", id)
+        let result = Array(realm.objects(Band.self).filter(predicate))
+        return result.first
     }
 }

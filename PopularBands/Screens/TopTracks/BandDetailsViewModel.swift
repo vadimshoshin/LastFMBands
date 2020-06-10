@@ -18,6 +18,10 @@ class BandDetailsViewModelImpl: BandDetailsViewModel {
     }
     
     func bandName() -> String {
-        return selectedBandId
+        guard let band = database.fetchBand(with: selectedBandId) else {
+            return ""
+        }
+        
+        return band.name
     }
 }
