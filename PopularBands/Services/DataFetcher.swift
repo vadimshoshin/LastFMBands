@@ -15,7 +15,7 @@ struct DataFetcherImpl: DataFetcher {
     }
     
     func fetchBands(for country: String, completion: @escaping (Result<[Band], Error>) -> Void) {
-        
+        #warning("In case of an offline mode, the app returns all saved popular bands, disregarding country")
         if Reachability.status {
             networking.getPopularBands(for: country, completion: completion)
         } else {

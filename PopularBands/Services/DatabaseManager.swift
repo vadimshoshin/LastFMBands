@@ -15,7 +15,6 @@ final class RealmManager: DatabaseManager {
         do {
             try realm.write {
                 realm.add(items, update: .all)
-//                realm.add(items)
             }
         } catch let error {
             debugPrint("Database storing error - \(error)")

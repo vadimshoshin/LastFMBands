@@ -19,12 +19,10 @@
 		857290E6248FAB0B00841874 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857290E5248FAB0B00841874 /* Band.swift */; };
 		857290E8248FAB1600841874 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857290E7248FAB1600841874 /* Track.swift */; };
 		857290EA248FAE9D00841874 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857290E9248FAE9D00841874 /* APIRouter.swift */; };
-		8572910C248FB4DE00841874 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572910B248FB4DE00841874 /* SceneDelegate.swift */; };
 		85729114248FCB9900841874 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85729113248FCB9900841874 /* DataFetcher.swift */; };
 		85729116248FCD7200841874 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85729115248FCD7100841874 /* AppDependencies.swift */; };
 		8572911B248FCF1500841874 /* BandsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572911A248FCF1500841874 /* BandsViewModel.swift */; };
 		8572911D248FCF1E00841874 /* BandsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572911C248FCF1E00841874 /* BandsRouter.swift */; };
-		8572911F248FCF6700841874 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572911E248FCF6700841874 /* NavigationRouter.swift */; };
 		859731DF2490E12300038AD8 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859731DE2490E12300038AD8 /* AppEnvironment.swift */; };
 		859731E02490E12300038AD8 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859731DE2490E12300038AD8 /* AppEnvironment.swift */; };
 		859731E22490F00900038AD8 /* BandDetailsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859731E12490F00900038AD8 /* BandDetailsMediator.swift */; };
@@ -41,12 +39,10 @@
 		85CE1FF02490153D00C4EE58 /* BandDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FEF2490153D00C4EE58 /* BandDetailsViewModel.swift */; };
 		85CE1FF42490D7A900C4EE58 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85729113248FCB9900841874 /* DataFetcher.swift */; };
 		85CE1FF52490D7A900C4EE58 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857290E2248FAAAA00841874 /* NetworkManager.swift */; };
-		85CE1FF62490D7A900C4EE58 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572911E248FCF6700841874 /* NavigationRouter.swift */; };
 		85CE1FF72490D7A900C4EE58 /* BandsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572911C248FCF1E00841874 /* BandsRouter.swift */; };
 		85CE1FF82490D7A900C4EE58 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FE92490066B00C4EE58 /* DatabaseManager.swift */; };
 		85CE1FF92490D7A900C4EE58 /* BandCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E74F69248FDC1A00C1E7B5 /* BandCellModel.swift */; };
 		85CE1FFA2490D7A900C4EE58 /* BandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E74F62248FDA5400C1E7B5 /* BandCell.swift */; };
-		85CE1FFB2490D7A900C4EE58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572910B248FB4DE00841874 /* SceneDelegate.swift */; };
 		85CE1FFC2490D7A900C4EE58 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857290E7248FAB1600841874 /* Track.swift */; };
 		85CE1FFD2490D7A900C4EE58 /* BandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857290D2248FA4A900841874 /* BandsViewController.swift */; };
 		85CE1FFE2490D7A900C4EE58 /* BandDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE1FED2490153100C4EE58 /* BandDetailsRouter.swift */; };
@@ -87,12 +83,10 @@
 		857290E5248FAB0B00841874 /* Band.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
 		857290E7248FAB1600841874 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		857290E9248FAE9D00841874 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
-		8572910B248FB4DE00841874 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		85729113248FCB9900841874 /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		85729115248FCD7100841874 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		8572911A248FCF1500841874 /* BandsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsViewModel.swift; sourceTree = "<group>"; };
 		8572911C248FCF1E00841874 /* BandsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsRouter.swift; sourceTree = "<group>"; };
-		8572911E248FCF6700841874 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		859731DE2490E12300038AD8 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		859731E12490F00900038AD8 /* BandDetailsMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandDetailsMediator.swift; sourceTree = "<group>"; };
 		859731E42490F0E400038AD8 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
@@ -186,7 +180,6 @@
 				857290D7248FA4AC00841874 /* Assets.xcassets */,
 				857290D9248FA4AC00841874 /* LaunchScreen.storyboard */,
 				857290DC248FA4AC00841874 /* Info.plist */,
-				8572910B248FB4DE00841874 /* SceneDelegate.swift */,
 			);
 			path = PopularBands;
 			sourceTree = "<group>";
@@ -194,7 +187,6 @@
 		857290E4248FAAFF00841874 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8572911E248FCF6700841874 /* NavigationRouter.swift */,
 				857290E5248FAB0B00841874 /* Band.swift */,
 				857290E7248FAB1600841874 /* Track.swift */,
 				85E74F69248FDC1A00C1E7B5 /* BandCellModel.swift */,
@@ -458,12 +450,10 @@
 			files = (
 				85729114248FCB9900841874 /* DataFetcher.swift in Sources */,
 				857290E3248FAAAA00841874 /* NetworkManager.swift in Sources */,
-				8572911F248FCF6700841874 /* NavigationRouter.swift in Sources */,
 				8572911D248FCF1E00841874 /* BandsRouter.swift in Sources */,
 				85CE1FEA2490066B00C4EE58 /* DatabaseManager.swift in Sources */,
 				85E74F6A248FDC1B00C1E7B5 /* BandCellModel.swift in Sources */,
 				85E74F64248FDA5400C1E7B5 /* BandCell.swift in Sources */,
-				8572910C248FB4DE00841874 /* SceneDelegate.swift in Sources */,
 				857290E8248FAB1600841874 /* Track.swift in Sources */,
 				857290D3248FA4A900841874 /* BandsViewController.swift in Sources */,
 				859731E62490F0E400038AD8 /* TrackCell.swift in Sources */,
@@ -490,12 +480,10 @@
 			files = (
 				85CE1FF42490D7A900C4EE58 /* DataFetcher.swift in Sources */,
 				85CE1FF52490D7A900C4EE58 /* NetworkManager.swift in Sources */,
-				85CE1FF62490D7A900C4EE58 /* NavigationRouter.swift in Sources */,
 				85CE1FF72490D7A900C4EE58 /* BandsRouter.swift in Sources */,
 				85CE1FF82490D7A900C4EE58 /* DatabaseManager.swift in Sources */,
 				85CE1FF92490D7A900C4EE58 /* BandCellModel.swift in Sources */,
 				85CE1FFA2490D7A900C4EE58 /* BandCell.swift in Sources */,
-				85CE1FFB2490D7A900C4EE58 /* SceneDelegate.swift in Sources */,
 				85CE1FFC2490D7A900C4EE58 /* Track.swift in Sources */,
 				85CE1FFD2490D7A900C4EE58 /* BandsViewController.swift in Sources */,
 				859731E72490F0E400038AD8 /* TrackCell.swift in Sources */,
