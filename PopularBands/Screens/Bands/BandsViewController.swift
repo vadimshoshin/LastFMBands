@@ -30,6 +30,9 @@ class BandsViewController: UIViewController {
             navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "statusIcon"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(modePressed))
             navigationItem.leftBarButtonItem?.tintColor = Reachability.status ? .green : .red
         }
+        
+        let tintColor: UIColor = (AppEnvironment.current == .develop) ? .red : .blue
+        countryButton.tintColor = tintColor
     }
     
     @objc func modePressed() {
