@@ -30,10 +30,10 @@ public class Reachability {
     }
     
     static var status: Bool {
-        #if DEVELOP
-        return !Reachability.forcedOfflineStatus
-        #else
-        return Reachability.isConnectedToNetwork()
-        #endif
+        if AppEnvironment.current == .develop {
+            return !Reachability.forcedOfflineStatus
+        } else {
+            return Reachability.isConnectedToNetwork()
+        }
     }
 }

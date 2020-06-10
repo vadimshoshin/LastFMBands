@@ -26,14 +26,16 @@ class BandsViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: viewModel.selectedCountry, style: .plain, target: self, action: #selector(selectCountry))
         countryButton = navigationItem.rightBarButtonItem
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "statusIcon"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(modePressed))
-        navigationItem.leftBarButtonItem?.tintColor = Reachability.status ? .green : .red
+        if AppEnvironment.current == .develop {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "statusIcon"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(modePressed))
+            navigationItem.leftBarButtonItem?.tintColor = Reachability.status ? .green : .red
+        }
     }
     
     @objc func modePressed() {
-        #if DEVELOP
+        if AppEnvironment.current == .develop {
             presentModeSelector()
-        #endif
+        }
     }
     
     private func presentModeSelector() {
